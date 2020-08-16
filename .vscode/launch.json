@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Firefox", // firefox -start-debugger-server 6000 -no-remote
+    "type": "firefox",
+    "request": "launch",
+    "port": 6000,
+    "url": "http://localhost:9000",
+    "webRoot": "${workspaceFolder}"
+  }, {
+    "name": "Chrome", // chrome --remote-debugging-port=9222
+    "type": "chrome",
+    "request": "launch",
+    "runtimeArgs": ["--disable-web-security --user-data-dir=\"${workspaceFolder}\""],
+    "port": 9222,
+    "url": "http://localhost:9000",
+    "webRoot": "${workspaceFolder}"
+  }]
+}
