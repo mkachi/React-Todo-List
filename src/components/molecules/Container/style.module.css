@@ -1,0 +1,9 @@
+.default {
+  display: flex;
+  flex-grow: 1;
+  margin: 0px auto;
+  padding: 10px;
+  max-width: 480px;
+  height: 100vh;
+  background-color: #dfedf9;
+}
