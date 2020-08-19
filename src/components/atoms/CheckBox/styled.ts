@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { lighten, darken } from '../../../utils/color'
+import { lighten } from '../../../utils/color'
 
 const style = (isChecked: boolean, color: string) => {
   if (!isChecked) {

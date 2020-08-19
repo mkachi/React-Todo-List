@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 import styles from './style.module.css'
-import styled from './style'
+import styled from './styled'
 
 import { AiOutlineCheck } from 'react-icons/ai'
 
@@ -15,10 +15,10 @@ interface IProps {
 const CheckBox: React.FC<IProps> = ({ className, checked = false, color = '#788cde', onChange = () => {} }) => {
   const [isChecked, setCheck] = useState(checked)
   const classProps = classNames(className, styles['default'])
-  const StyledComponent = styled(isChecked, color)
+  const StyledSpan = styled(isChecked, color)
 
   return (
-    <StyledComponent className={classProps}>
+    <StyledSpan className={classProps}>
       <input
         className={styles['check-input']}
         type={'checkbox'}
@@ -29,7 +29,7 @@ const CheckBox: React.FC<IProps> = ({ className, checked = false, color = '#788c
         }}
       />
       {isChecked && <AiOutlineCheck className={styles['check-icon']} />}
-    </StyledComponent>
+    </StyledSpan>
   )
 }
 

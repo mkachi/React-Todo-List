@@ -1,7 +1,7 @@
 .default {
   width: 25px;
   height: 25px;
-  border: 2px solid #b9b9b9;
+  border: 2px solid #999999;
   border-radius: 100%;
   display: flex;
   justify-content: center;
