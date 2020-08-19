@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './style'
+import styles from './style.module.css'
+import styled from './style'
 
 interface IProps {
   className?: string
@@ -11,13 +12,13 @@ interface IProps {
 }
 
 const Button: React.FC<IProps> = ({ className, children, variant = 'text', color = '#788cde', onClick = () => {} }) => {
-  const classProps = classNames(className)
-  const StyleButton = styles(variant, color)
+  const classProps = classNames(className, styles['default'])
+  const StyledComponent = styled(variant, color)
 
   return (
-    <StyleButton className={classProps} onClick={onClick}>
+    <StyledComponent className={classProps} onClick={onClick}>
       {children}
-    </StyleButton>
+    </StyledComponent>
   )
 }
 

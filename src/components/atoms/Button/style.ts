@@ -1,17 +1,7 @@
 import styled from 'styled-components'
 import { opacity, darken } from '../../../utils/color'
 
-const defaultStyle = () => `
-border: 0;
-padding: 0 1em;
-min-height: 2.5em;
-border-radius: 8px;
-cursor: pointer;
-background-color: transparent;
-`
-
 const contain = (color: string) => `
-${defaultStyle()}
 background-color: ${color};
 transition: all 0.3s ease;
 
@@ -21,7 +11,6 @@ transition: all 0.3s ease;
 `
 
 const text = (color: string) => `
-${defaultStyle()}
 color: ${color};
 background-color: ${opacity(color, 0.0)};
 transition: all 0.3s ease;
@@ -32,7 +21,6 @@ transition: all 0.3s ease;
 `
 
 const outline = (color: string) => `
-${defaultStyle()}
 color: ${color};
 background-color: ${opacity(color, 0.0)};
 transition: all 0.3s ease;
@@ -45,7 +33,6 @@ border-radius: 5px;
 `
 
 const link = (color: string) => `
-${defaultStyle()}
 color: ${color};
 background-color: ${opacity(color, 0.0)};
 transition: all 0.3s ease;
