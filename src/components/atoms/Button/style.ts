@@ -3,7 +3,6 @@ import { opacity, darken } from '../../../utils/color'
 
 const contain = (color: string) => `
 background-color: ${color};
-transition: all 0.3s ease;
 
 &:hover {
   background-color: ${darken(color, 30)};
@@ -12,8 +11,7 @@ transition: all 0.3s ease;
 
 const text = (color: string) => `
 color: ${color};
-background-color: ${opacity(color, 0.0)};
-transition: all 0.3s ease;
+background-color: transparent;
 
 &:hover {
   background-color: ${opacity(color, 0.2)};
@@ -22,8 +20,8 @@ transition: all 0.3s ease;
 
 const outline = (color: string) => `
 color: ${color};
-background-color: ${opacity(color, 0.0)};
-transition: all 0.3s ease;
+background-color: transparent;
+
 border: 1px solid ${color};
 border-radius: 5px;
 
@@ -34,8 +32,7 @@ border-radius: 5px;
 
 const link = (color: string) => `
 color: ${color};
-background-color: ${opacity(color, 0.0)};
-transition: all 0.3s ease;
+background-color: transparent;
 
 &:hover {
   text-decoration: underline;
