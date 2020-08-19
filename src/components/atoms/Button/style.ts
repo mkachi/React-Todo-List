@@ -5,7 +5,7 @@ const defaultStyle = () => `
 border: 0;
 padding: 0 1em;
 min-height: 2.5em;
-border-radius: 5px;
+border-radius: 8px;
 cursor: pointer;
 background-color: transparent;
 `
