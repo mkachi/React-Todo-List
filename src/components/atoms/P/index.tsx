@@ -8,7 +8,7 @@ interface IProps {
   align?: 'center' | 'right' | 'left'
 }
 
-const P: React.FC<IProps> = ({ className, children, align = 'right' }) => {
+const P: React.FC<IProps> = ({ className, children, align = 'left' }) => {
   const classProps = classNames(className, styles['default'], styles[align])
   return <p className={classProps}>{children}</p>
 }
