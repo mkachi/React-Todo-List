@@ -23,6 +23,7 @@ const TodoCard: React.FC<IProps> = ({ className, data, onClick }) => {
     <Card className={classProps} element={'article'}>
       <CheckBox
         checked={isChecked}
+        color={'#78ded0'}
         onChange={(event: React.FormEvent<HTMLInputElement>) => {
           setCheck(event.target.checked)
         }}
