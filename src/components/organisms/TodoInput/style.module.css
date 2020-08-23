@@ -1,0 +1,14 @@
+.default {
+  display: flex;
+}
+
+.input {
+  color: #1d6f69;
+  width: 100%;
+}
+
+.add-button {
+  font-size: 0.75em;
+  padding: 0em 0.7em !important;
+  margin-left: auto;
+}
