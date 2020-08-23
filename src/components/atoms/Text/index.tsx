@@ -20,6 +20,7 @@ const Text: React.FC<IProps> = ({
   strike = false,
 }) => {
   const classProps = classNames(
+    className,
     bold ? styles['bold'] : '',
     italic ? styles['italic'] : '',
     underline ? styles['underline'] : '',
