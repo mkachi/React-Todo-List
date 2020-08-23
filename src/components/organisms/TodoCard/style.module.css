@@ -1,0 +1,20 @@
+.default {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.checked {
+  color: #b1b1b1;
+}
+
+.remove-button {
+  font-size: 0.8em;
+  padding: 0.5em 0.7em !important;
+  margin-left: auto;
+}
