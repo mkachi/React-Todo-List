@@ -30,7 +30,7 @@ const TodoCard: React.FC<IProps> = ({ className, data, onClick }) => {
       <Text className={descriptProps} strike={isChecked}>
         {data.description}
       </Text>
-      <Button className={styles['remove-button']} variant={'outline'} color={'#ff4e4e'} onClick={onClick}>
+      <Button className={styles['remove-button']} variant={'text'} color={'#ff4e4e'} onClick={onClick}>
         <BsFillTrashFill />
       </Button>
     </Card>
