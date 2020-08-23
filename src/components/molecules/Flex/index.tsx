@@ -1,9 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
 import styles from './style.module.css'
+import Semantics, { TagType } from '../../atoms/Semantics'
 
 interface IProps {
   className?: string
+  element?: TagType
   children?: React.ReactNode
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse'
   align?: 'start' | 'center' | 'end' | 'stretch'
@@ -12,7 +14,16 @@ interface IProps {
   overflow?: 'auto' | 'hidden'
 }
 
-const Flex: React.FC<IProps> = ({ className, children, direction = 'row', align, justify, wrap = 'no-wrap', overflow }) => {
+const Flex: React.FC<IProps> = ({
+  className,
+  element = 'div',
+  children,
+  direction = 'row',
+  align,
+  justify,
+  wrap = 'no-wrap',
+  overflow,
+}) => {
   const classProps = classNames(
     className,
     styles['default'],
@@ -22,7 +33,11 @@ const Flex: React.FC<IProps> = ({ className, children, direction = 'row', align,
     justify ? styles['justify-' + justify] : '',
     overflow ? styles['overflow-' + overflow] : ''
   )
-  return <div className={classProps}>{children}</div>
+  return (
+    <Semantics element={element} className={classProps}>
+      {children}
+    </Semantics>
+  )
 }
 
 export default Flex
