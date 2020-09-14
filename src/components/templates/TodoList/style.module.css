@@ -1,0 +1,12 @@
+.default {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.default::-webkit_scrollbar {
+  display: none;
+}
