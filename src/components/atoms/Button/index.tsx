@@ -13,10 +13,10 @@ interface IProps {
 
 const Button: React.FC<IProps> = ({ className, children, variant = 'text', color = '#788cde', onClick = () => {} }) => {
   const classProps = classNames(className, styles['default'])
-  const StyledButton = styled(variant, color)
+  const StyledButton = styled(variant)
 
   return (
-    <StyledButton className={classProps} onClick={onClick}>
+    <StyledButton className={classProps} color={color} onClick={onClick}>
       {children}
     </StyledButton>
   )

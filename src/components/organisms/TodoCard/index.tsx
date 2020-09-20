@@ -16,11 +16,11 @@ interface IProps {
 }
 
 const TodoCard: React.FC<IProps> = ({ className, data, onClick }) => {
-  const [ isChecked, setCheck ] = useState(false)
+  const [isChecked, setCheck] = useState(false)
   const classProps = classNames(className, styles['default'])
   const descriptProps = classNames(styles['description'], isChecked ? styles['checked'] : '')
   return (
-    <Card className={classProps} element={'article'}>
+    <Card className={classProps}>
       <CheckBox
         checked={isChecked}
         color={'#78ded0'}

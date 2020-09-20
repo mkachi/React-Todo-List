@@ -1,21 +1,25 @@
 import React from 'react'
 import classNames from 'classnames'
 import styles from './style.module.css'
-import styled from './styled'
-
-import { TagType } from '../../atoms/Semantics'
+import styled from 'styled-components'
 
 interface IProps {
   className?: string
-  element?: TagType
   color?: string
   children?: React.ReactNode
 }
 
-const Card: React.FC<IProps> = ({ className, element = 'div', color = '#ffffff', children }) => {
+const StyledTag = styled.article`
+  background-color: ${props => props.color};
+`
+
+const Card: React.FC<IProps> = ({ className, color = '#ffffff', children }) => {
   const classProps = classNames(className, styles['default'])
-  const StyledTag = styled(element, color)
-  return <StyledTag className={classProps}>{children}</StyledTag>
+  return (
+    <StyledTag className={classProps} color={color}>
+      {children}
+    </StyledTag>
+  )
 }
 
 export default Card

@@ -15,16 +15,10 @@ interface IProps {
   onChange?(event: React.FormEvent<HTMLInputElement>): void
 }
 
-const TodoInput: React.FC<IProps> = ({
-  className,
-  placeholder = '',
-  text = '',
-  onClick = () => {},
-  onChange = () => {},
-}) => {
+const TodoInput: React.FC<IProps> = ({ className, placeholder = '', text = '', onClick = () => {}, onChange = () => {} }) => {
   const classProps = classNames(className, styles['default'])
   return (
-    <Card className={classProps} element={'div'} color={'#36bdb44f'}>
+    <Card className={classProps} color={'#36bdb44f'}>
       <TextBox className={styles['input']} placeholder={placeholder} value={text} onChange={onChange} />
       <Button className={styles['add-button']} variant={'text'} color={'#ffffff'} onClick={onClick}>
         <GrAdd />
