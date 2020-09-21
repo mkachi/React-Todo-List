@@ -19,7 +19,17 @@ const TodoInput: React.FC<IProps> = ({ className, placeholder = '', text = '', o
   const classProps = classNames(className, styles['default'])
   return (
     <Card className={classProps} color={'#36bdb44f'}>
-      <TextBox className={styles['input']} placeholder={placeholder} value={text} onChange={onChange} />
+      <TextBox
+        className={styles['input']}
+        placeholder={placeholder}
+        value={text}
+        onChange={onChange}
+        onKeyPress={(event: React.KeyboardEvent<HTMLInputElement>) => {
+          if (event.key === 'Enter') {
+            onClick(null)
+          }
+        }}
+      />
       <Button className={styles['add-button']} variant={'text'} color={'#ffffff'} onClick={onClick}>
         <GrAdd />
       </Button>

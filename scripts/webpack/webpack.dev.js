@@ -39,7 +39,8 @@ module.exports = merge(base, {
   devServer: {
     host: config.devServer.host,
     port: config.devServer.port,
-    open: true
+    open: true,
+    disableHostCheck: true
   },
   plugins: getPlugins()
 })

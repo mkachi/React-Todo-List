@@ -7,6 +7,6 @@
   margin-bottom: 10px;
 }
 
-.list::-webkit_scrollbar {
+.list::-webkit-scrollbar {
   display: none;
 }
