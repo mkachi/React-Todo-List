@@ -18,6 +18,7 @@ export const TodoConsumer = TodoContext.Consumer
 
 export const TodoProvider: React.FC<IProps> = ({ children }) => {
   const [items, setItems] = useState<ITodo[]>([])
+  const [itemIndex, setIndex] = useState(0)
 
   return (
     <TodoContext.Provider
@@ -25,11 +26,12 @@ export const TodoProvider: React.FC<IProps> = ({ children }) => {
         items,
         add: (description: string): void => {
           const todo: ITodo = {
-            id: items.length + 1,
+            id: itemIndex,
             checked: false,
             description
           }
           setItems([...items, todo])
+          setIndex(itemIndex + 1)
         },
         remove: (id: number): void => {
           setItems(items.filter(value => value.id !== id))
