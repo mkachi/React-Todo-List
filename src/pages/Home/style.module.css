@@ -1,4 +1,4 @@
-.default {
+.list {
   overflow: scroll;
   overflow-x: hidden;
   -ms-overflow-style: none;
@@ -7,6 +7,6 @@
   margin-bottom: 10px;
 }
 
-.default::-webkit_scrollbar {
+.list::-webkit_scrollbar {
   display: none;
 }
