@@ -69,6 +69,7 @@
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^4.1.0",
     "typescript": "^3.9.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^3.8.0",
