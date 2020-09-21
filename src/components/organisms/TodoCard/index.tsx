@@ -12,10 +12,10 @@ import { BsFillTrashFill } from 'react-icons/bs'
 interface IProps {
   className?: string
   data: ITodo
-  onClick?(event: React.FormEvent<HTMLButtonElement>): void
+  onRemove?(event: React.FormEvent<HTMLButtonElement>): void
 }
 
-const TodoCard: React.FC<IProps> = ({ className, data, onClick }) => {
+const TodoCard: React.FC<IProps> = ({ className, data, onRemove }) => {
   const [isChecked, setCheck] = useState(false)
   const classProps = classNames(className, styles['default'])
   const descriptProps = classNames(styles['description'], isChecked ? styles['checked'] : '')
@@ -31,7 +31,7 @@ const TodoCard: React.FC<IProps> = ({ className, data, onClick }) => {
       <Text className={descriptProps} strike={isChecked}>
         {data.description}
       </Text>
-      <Button className={styles['remove-button']} variant={'text'} color={'#ff4e4e'} onClick={onClick}>
+      <Button className={styles['remove-button']} variant={'text'} color={'#ff4e4e'} onClick={onRemove}>
         <BsFillTrashFill />
       </Button>
     </Card>
