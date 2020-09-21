@@ -3,7 +3,7 @@ import { ITodo } from '../../models/ITodo'
 
 interface ITodoList {
   items: ITodo[]
-  add(todo: ITodo): number
+  add(description: string): void
   remove(id: number): void
   setToggle(id: number, value: boolean): void
 }
@@ -21,10 +21,13 @@ export const TodoProvider: React.FC<IProps> = ({ children }) => {
     <TodoContext.Provider
       value={{
         items,
-        add: (todo: ITodo): number => {
+        add: (description: string): void => {
+          const todo: ITodo = {
+            id: items.length + 1,
+            checked: false,
+            description
+          }
           setItems([...items, todo])
-          todo.id = items.length
-          return items.length
         },
         remove: (id: number): void => {
           items.forEach((item, index) => {
