@@ -1,0 +1,12 @@
+.list {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}

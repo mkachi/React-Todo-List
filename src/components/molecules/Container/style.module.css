@@ -1,0 +1,10 @@
+.default {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0px auto;
+  padding: 15px;
+  max-width: 480px;
+  height: 100vh;
+  background-color: #d4f1ef;
+}

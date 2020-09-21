@@ -1,0 +1,25 @@
+.default {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #999999;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: all 0.3s ease;
+}
+
+.check-input {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.check-icon {
+  position: absolute;
+  margin-top: 3px;
+  color: #ffffff;
+  font-size: 0.9em;
+}

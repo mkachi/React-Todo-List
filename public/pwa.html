@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="manifest" href="./manifest.json" />
+  <title>template</title>
+</head>
+
+<body>
+  <noscript>You need to enable Javascript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('pwa.js').then(function (registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function (err) {
+          console.log('Worker registration failed', err);
+        }).catch(function (err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+
+  </script>
+</body>
+
+</html>
