@@ -1,5 +1,30 @@
 # React-Todo-List
-ReactJS Todo list project
+
+Simple to-do list with React.js, Typescript
+
+![preview](img/preview.gif)
+
+## Environment
+
+* Visual Studio Code
+* NodeJS v11.13
+* React.JS
+* Typescript
+* Github Action
+
+## Quick Start
+
+```bash
+npm install
+```
+
+Install npm packages
+
+```bash
+npm run develop
+```
+
+Project run with develop mode
 
 ## Scripts
 
@@ -8,23 +33,3 @@ ReactJS Todo list project
 * **proxy** : start webpack-dev-server and proxy server for external access
 * **lint** : eslint rule check
 * **lint-fix** : modify the code to eslint rules
-
-## Config
-
-`scripts/config.js`
-
-* **src** : source code directory path
-* **out** : build result directory path
-* **assets** : assets directory path
-* **public** : public directory path
-* **useLint** : if useLint is true, Check the eslint rules
-* **useAnalyzer** : if useAnalyzer is true, Visualize the capacity of the bundle
-* **usePWA** : if usePWA is true, Apply settings required for pwa
-* **showLintError** : if showLintError is true, Show errors in eslint
-* **`devServer`**
-  * **host** : development server host
-  * **port** : development server port
-  * **proxy** : development server proxy port
-* **`analyzer`**
-  * **host** : analyzer page server host
-  * **port** : analyzer page server port
