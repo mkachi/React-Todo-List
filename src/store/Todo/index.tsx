@@ -8,7 +8,7 @@ interface ITodoList {
   setToggle(id: number, value: boolean): void
 }
 
-const TodoContext = React.createContext<ITodoList | null>(null)
+export const TodoContext = React.createContext<ITodoList | null>(null)
 
 interface IProps {
   children?: React.ReactNode
