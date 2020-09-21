@@ -14,6 +14,8 @@ interface IProps {
   children?: React.ReactNode
 }
 
+export const TodoConsumer = TodoContext.Consumer
+
 export const TodoProvider: React.FC<IProps> = ({ children }) => {
   const [items, setItems] = useState<ITodo[]>([])
 
@@ -30,17 +32,13 @@ export const TodoProvider: React.FC<IProps> = ({ children }) => {
           setItems([...items, todo])
         },
         remove: (id: number): void => {
-          items.forEach((item, index) => {
-            if (item.id == id) {
-              setItems(items.slice(index, 1))
-              return
-            }
-          })
+          setItems(items.filter(value => value.id !== id))
         },
         setToggle: (id: number, value: boolean): void => {
           items.forEach(item => {
             if (item.id === id) {
               item.checked = value
+              setItems([...items])
               return
             }
           })
