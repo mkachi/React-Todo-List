@@ -5,12 +5,15 @@ import router from './router'
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
+import { TodoProvider } from './store/Todo'
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Switch>{router()}</Switch>
-    </Router>
+    <TodoProvider>
+      <Router>
+        <Switch>{router()}</Switch>
+      </Router>
+    </TodoProvider>
   )
 }
 
