@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 import styles from './style.module.css'
 import { ITodo } from '../../../models/ITodo'
@@ -12,23 +12,17 @@ import { BsFillTrashFill } from 'react-icons/bs'
 interface IProps {
   className?: string
   data: ITodo
+  onToggle?(event: React.FormEvent<HTMLButtonElement>): void
   onRemove?(event: React.FormEvent<HTMLButtonElement>): void
 }
 
-const TodoCard: React.FC<IProps> = ({ className, data, onRemove }) => {
-  const [isChecked, setCheck] = useState(false)
+const TodoCard: React.FC<IProps> = ({ className, data, onToggle, onRemove }) => {
   const classProps = classNames(className, styles['default'])
-  const descriptProps = classNames(styles['description'], isChecked ? styles['checked'] : '')
+  const descriptProps = classNames(styles['description'], data.checked ? styles['checked'] : '')
   return (
     <Card className={classProps}>
-      <CheckBox
-        checked={isChecked}
-        color={'#78ded0'}
-        onChange={(event: React.FormEvent<HTMLInputElement>) => {
-          setCheck(event.target.checked)
-        }}
-      />
-      <Text className={descriptProps} strike={isChecked}>
+      <CheckBox checked={data.checked} color={'#78ded0'} onChange={onToggle} />
+      <Text className={descriptProps} strike={data.checked}>
         {data.description}
       </Text>
       <Button className={styles['remove-button']} variant={'text'} color={'#ff4e4e'} onClick={onRemove}>
