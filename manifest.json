@@ -1,7 +1,9 @@
 {
-  "app.js": "/home/runner/work/React-Todo-List/React-Todo-List/public./app.662d5253ceb4ec1a1d01.js",
-  "vendor.js": "/home/runner/work/React-Todo-List/React-Todo-List/public./vendor.4b9c9117533c179142d5.js",
+  "app.js": "/home/runner/work/React-Todo-List/React-Todo-List/public./app.10d0c1bd52d3f61de2df.js",
+  "vendor.js": "/home/runner/work/React-Todo-List/React-Todo-List/public./vendor.bed6cbfbf11970831027.js",
+  "./app.10d0c1bd52d3f61de2df.js.LICENSE.txt": "/home/runner/work/React-Todo-List/React-Todo-List/public./app.10d0c1bd52d3f61de2df.js.LICENSE.txt",
   "./index.html": "/home/runner/work/React-Todo-List/React-Todo-List/public./index.html",
+  "./vendor.bed6cbfbf11970831027.js.LICENSE.txt": "/home/runner/work/React-Todo-List/React-Todo-List/public./vendor.bed6cbfbf11970831027.js.LICENSE.txt",
   "favicon.ico": "/home/runner/work/React-Todo-List/React-Todo-List/publicfavicon.ico",
   "robots.txt": "/home/runner/work/React-Todo-List/React-Todo-List/publicrobots.txt"
 }
